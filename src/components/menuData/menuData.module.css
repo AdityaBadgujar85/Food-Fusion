@@ -1,0 +1,19 @@
+.cartIcon{
+    width: 1.5rem;
+}
+
+.ButtonSize {
+  background-color: #5a3c20 !important;
+  border: none !important;
+  width: 100%;
+  color: white !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.ButtonSize:hover,
+.ButtonSize:active {
+  background-color: #2b1d12 !important;
+  outline: none !important;
+  box-shadow: none !important;
+}

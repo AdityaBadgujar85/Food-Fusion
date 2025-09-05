@@ -1,0 +1,16 @@
+.navbar{
+background: linear-gradient(90deg, #2b1d12, #5a3c20, #d4b483);
+}
+.brand{
+    font-family: 'Brush Script MT', cursive;
+    color: wheat;
+}
+.navLink{
+    color: #2b1d12;
+    text-decoration: none;
+    margin-right: 1rem;
+    font-weight: 600;
+}
+
+
+

@@ -1,0 +1,11 @@
+.mainContainer{
+  background: linear-gradient(90deg, #2b1d12, #5a3c20, #d4b483);
+    position: fixed; 
+    bottom: 0;
+    padding: 1rem;
+    
+}
+.heading{
+  color: wheat;
+  font-family: 'Brush Script MT', cursive;
+}
