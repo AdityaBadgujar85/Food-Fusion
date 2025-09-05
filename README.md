@@ -32,4 +32,5 @@ You can check the deployed project here:
 ## 🌐 API Used  
 This project fetches food data from the following API:  
 🔗 [API](https://68a48c83c123272fb9b31f39.mockapi.io/Menu)
+
 ---
