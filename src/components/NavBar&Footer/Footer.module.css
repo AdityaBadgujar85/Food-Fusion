@@ -1,0 +1,15 @@
+footer{
+    width: 100%;
+    bottom: 0;
+    padding-top: 1rem;
+}
+.Brand{
+  font-family: "Great Vibes", cursive;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1.5rem;
+}
+.text-Font{
+  font-family: "Story Script", sans-serif;
+  font-style: normal;
+}

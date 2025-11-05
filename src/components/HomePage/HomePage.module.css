@@ -1,0 +1,20 @@
+.DisplayImg{
+    height: 50vh;
+    object-fit: cover;
+    width: 100%;
+}
+.Font-Design{
+font-family: "Story Script", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+.badgeDesign{
+  color: black;
+  background-color: white;
+  margin-left: 0.8rem;  
+  padding-right: 0.2rem;
+  padding-left: 0.2rem;
+  font-size: 0.8rem;
+  border-radius: 0.2rem;
+  font-weight: bold;
+}

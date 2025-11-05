@@ -1,0 +1,12 @@
+.text-Formating-Contact{
+  font-family: "Story Script", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+.ImgStyle{
+  height: 70vh;
+  object-fit: cover;  
+}
+.mainContainer{
+  margin-top: 2rem;
+}

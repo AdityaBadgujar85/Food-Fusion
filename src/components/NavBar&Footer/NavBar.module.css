@@ -1,0 +1,17 @@
+
+.Font {
+  font-family: "Great Vibes", cursive;
+  font-weight: 600;
+  font-style: normal;
+}
+.Navbar-Links{
+  font-family: "Story Script", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  text-decoration: none;
+  color: grey;
+  margin-left: 2rem;
+}
+.Navbar-Links:hover{
+  color: black;
+}
