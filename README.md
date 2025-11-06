@@ -58,6 +58,4 @@ You can check the deployed project here:
 | **Lazy Loading** | Optimized loading |
 | **CSS / Bootstrap / Tailwind** | Styling & Responsive Design |
 
----
 
-## 📂 Folder Structure
