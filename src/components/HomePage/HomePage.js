@@ -1,12 +1,11 @@
-import React from 'react';
+import React ,{Suspense,lazy} from 'react';
 import { Container, Col, Row, Button } from 'react-bootstrap';
 import Restaurant from '../Images/Restrarent.jpeg';
 import classes from './HomePage.module.css';
-import MenuData from './MenuData';
 import { FaCartShopping } from 'react-icons/fa6';
 import { useNavigate } from 'react-router-dom';
 import { connect } from 'react-redux';
-
+const MenuData = lazy(()=> import('./MenuData'))
 function HomePage(props) {
   const cart = props.cart
   const navigate = useNavigate()
@@ -29,10 +28,11 @@ function HomePage(props) {
           </Col>
         </Row>
       </Container>
-
+      <Suspense fallback={<div>Loading...</div>}>
       <Container fluid>
         <MenuData />
       </Container>
+      </Suspense>
     </>
   );
 }

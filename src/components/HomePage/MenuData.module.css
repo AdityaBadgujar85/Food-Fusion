@@ -1,3 +1,6 @@
+.mainContainer{
+  min-height: 100vh;
+}
 .FoodImg{
     width:'100%';
     height: 30vh;

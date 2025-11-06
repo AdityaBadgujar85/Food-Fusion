@@ -25,7 +25,7 @@ function MenuData(props) {
   };
 
   return (
-    <Container fluid>
+    <Container fluid className={classes.mainContainer}>
       <Row>
         {myData.map((item) => (
           <Col key={item.id} md={3} xs={6}>

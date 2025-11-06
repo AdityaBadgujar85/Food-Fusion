@@ -14,7 +14,7 @@ function CartPage(props) {
   const totalPrice = cart.reduce((total, item) => total + item.FoodPrice * item.qty, 0);
 
   return (
-    <Container fluid className={classes.mainContainer}>
+    <Container className={classes.mainContainer}>
       <h1 className={classes.textDecorationH1}>Your Cart</h1>
 
       {cart.length === 0 ? (

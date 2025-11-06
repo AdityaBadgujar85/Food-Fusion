@@ -4,11 +4,11 @@ import classes from "./ContactPage.module.css";
 
 function ContactPage() {
   return (
-    <div>
+    <Container fluid className="m-0">
       <Row>
         <img src={require('../Images/Rest_Contact.png')} alt="" className={classes.ImgStyle} />
       </Row>
-    <Container fluid className={classes.mainContainer}>
+    <Container className={classes.mainContainer}>
       <Row>
         <Col xs={12}>
           <h2 className={classes['text-Formating-Contact']}>Contact Us</h2>
@@ -44,7 +44,7 @@ function ContactPage() {
         </Col>
       </Row>
     </Container>
-    </div>
+    </Container>
   );
 }
 export default ContactPage
