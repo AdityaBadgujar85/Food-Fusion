@@ -1,49 +1,94 @@
 .mainContainer {
   margin-top: 6rem;
-  padding: 1rem 0;
   min-height: 80vh;
+  margin-bottom: 3rem;
 }
-
 .CartImg {
-  width: 100%;
-  height: 15vh;
+  height: 70px;
   object-fit: cover;
-  border-radius: 1rem;
-}
+  border-radius: 0.4rem;
+  aspect-ratio: 1/1;
 
-.CardContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
-
-.counterDesign {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-.counterContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.CounterNumber {
-  margin: 0.5rem; 
-}
-
 .textDecorationH1 {
   font-family: "Story Script", sans-serif;
   font-weight: 600;
-  font-style: normal;
   text-align: center;
+  margin-bottom: 2rem;
 }
-
 .textDecorationH4 {
   font-family: "Story Script", sans-serif;
   font-weight: 600;
-  font-style: normal;
-  color: grey;
   text-align: center;
+  color: grey;
+  margin-top: 3rem;
+}
+.rowContainer {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 0.6rem;
+  gap:10px
+}
+.heading5 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+}
+.pricepara {
+  font-size: 0.8rem;
+  margin: 0.2rem 0;
+  font-weight: 500;
+}
+.counterCol {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  padding-right: 2rem;
+}
+.CounterNumber {
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0rem 0.4rem;
+}
+.incrementTextButton{
+  font-size: 0.9rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.4rem;
+}
+.DecrementTextButton {
+  font-size: 0.9rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.4rem;
+}
+@media (max-width: 768px) {
+  .CartImg {
+    height: 10vh;
+  }
+
+  .heading5 {
+    font-size: 0.85rem;
+  }
+
+  .pricepara {
+    font-size: 0.75rem;
+  }
+
+  .CounterNumber {
+    font-size: 0.9rem;
+    margin: 0 0.3rem;
+  }
+
+  .incrementTextButton{
+    font-size: 1rem;
+    padding: 0.3rem 0.7rem;
+    width: auto;
+  }
+  .DecrementTextButton {
+    font-size: 1rem;
+    padding: 0.3rem 0.7rem;
+    width: auto;
+  }
 }

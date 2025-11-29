@@ -1,0 +1,61 @@
+.formContainer{
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 0.4rem;
+  background-color: #fff;
+  text-align: left;
+}
+.formControlAddress {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 0.4rem;
+  background-color: #fff;
+  text-align: left;
+}
+
+.formContainer h3{
+    margin-bottom: 1rem;
+  font-weight: 600;
+}
+.formControlAddress h3 {
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+label {
+  margin-top: 0.8rem;
+  margin-bottom: 0.2rem;
+  font-size: 0.9rem;
+}
+
+input {
+  border-radius: 0.3rem ;
+  padding: 0.5rem;
+}
+
+.nameContainer{
+margin-bottom: 1rem;
+}
+.addressContainer {
+  margin-bottom: 1rem;
+}
+
+.formControlAddress .row {
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .formContainer,
+  .formControlAddress {
+    padding: 1rem;
+  }
+
+  label {
+    font-size: 0.8rem;
+  }
+
+  input {
+    font-size: 0.8rem !important;
+  }
+}

@@ -8,8 +8,40 @@ footer{
   font-weight: 600;
   font-style: normal;
   font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: left;
+  padding-left: 0.5rem;
 }
 .text-Font{
   font-family: "Story Script", sans-serif;
   font-style: normal;
+}
+.allRightsDesign{
+  justify-content: center;
+}
+.linkDesign{
+  font-family: "Story Script", sans-serif;
+  font-style: normal;
+  text-decoration: none;
+  color: black;
+}
+.linkContiner{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.iconDesginContainer{
+  display: flex;
+  flex-direction:row;
+  justify-content: right;
+}
+@media (max-width: 768px) {
+.linkContiner{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.Brand{
+  text-align: left;
+}
 }

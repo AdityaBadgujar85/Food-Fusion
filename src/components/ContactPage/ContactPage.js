@@ -1,14 +1,41 @@
-import React from "react";
-import { Container, Row, Col,Card } from "react-bootstrap";
+import React, { useState } from "react";
+import { Container, Row, Col,Card, Button } from "react-bootstrap";
 import classes from "./ContactPage.module.css";
 
 function ContactPage() {
+  const [name,setName]=useState('')
+  const [email,setEmail]=useState('')
+  const [phone,setPhone] = useState('')
+  const handleSubmitName=(e)=>{
+    e.preventDefault()
+    setName(e.target.value)
+  }
+  const handleSubmitEmail=(e)=>{
+    e.preventDefault()
+    setEmail(e.target.value)
+  }
+  const handleSubmitPhone=(e)=>{
+    e.preventDefault()
+    setPhone(e.target.value)
+  }
+
+  const handleSubmit=(e)=>{
+    e.preventDefault()
+    console.log(name)
+    console.log(email)
+    console.log(phone)
+    alert("Appoiments Is Booked Successfully")
+    setName('')
+    setEmail('')
+    setPhone('')
+  }
+
   return (
-    <div>
+    <Container fluid>
       <Row>
         <img src={require('../Images/Rest_Contact.png')} alt="" className={classes.ImgStyle} />
       </Row>
-    <Container fluid className={classes.mainContainer}>
+    <Container className={classes.mainContainer}>
       <Row>
         <Col xs={12}>
           <h2 className={classes['text-Formating-Contact']}>Contact Us</h2>
@@ -44,7 +71,21 @@ function ContactPage() {
         </Col>
       </Row>
     </Container>
-    </div>
+    <Container className={classes.formContainer}>
+      <form className="">
+        <label htmlFor="" className="">Name:</label>
+        <input type="text" className="form-control" placeholder="Enter Your Name" value={name} onChange={handleSubmitName}/>
+        <br />
+        <label htmlFor="">Email:</label>
+        <input type="email" name="" id="" className="form-control" placeholder="Enter Email" value={email} onChange={handleSubmitEmail}/>
+        <br />
+        <label htmlFor="">Phone:</label>
+        <input type="number" name="" id="" className="form-control" placeholder="Enter Phone Number" value={phone} onChange={handleSubmitPhone}/>
+        <br />
+        <Button onClick={handleSubmit}>Book Appoinment</Button>
+      </form>
+    </Container>
+    </Container>
   );
 }
 export default ContactPage

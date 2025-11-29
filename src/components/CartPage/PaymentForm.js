@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Container, Button } from 'react-bootstrap';
 import classes from './PaymentForm.module.css'
+import PaymentSuccessfullModel from './PaymentSuccessfullModel';
+
 function PaymentForm() {
     const [paymentOption,setPaymentOption] = useState('')
     const [cardNumb, setCardNumb] = useState("")
@@ -8,9 +10,18 @@ function PaymentForm() {
     const [cvvNumb,setCvvNumb] = useState("")
     const [cardPayment, setCardPayment] = useState(true)
     const [bank,setBank]=useState('')
-    const handleSubmit = (e) => {
+      const [show,setShow]=useState(false)
+    const handleSubmitcardNUmber = (e) => {
         e.preventDefault()
-        console.log(cardNumb, expiry, cvvNumb)
+       setCardNumb(e.target.value)
+    }
+    const handleSubmitsetExpiry = (e) => {
+        e.preventDefault()
+       setExpiry(e.target.value)
+    }
+    const handleSubmitCvv = (e) => {
+        e.preventDefault()
+       setCvvNumb(e.target.value)
     }
     const handleSelectOption = (e) => {
         setPaymentOption(e.target.value)
@@ -18,9 +29,18 @@ function PaymentForm() {
     const handleSelectBank = (e) =>{
         setBank(e.target.value)
     }
-    const handleSubmitForm = () => {
-        alert('your Payment is Successfully Done')
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        console.log(cardNumb,expiry,cvvNumb)
+        if(!cardNumb || !expiry || !cvvNumb){
+            alert('please Fill the Details')
+        }else{
+            setShow(true)
+        }
+        
     }
+    
+
     return ( 
         <Container fluid className={classes.mainContainer}>
         <h5>Payment Method</h5>
@@ -34,20 +54,20 @@ function PaymentForm() {
         </select>
         <hr />
           {paymentOption === 'card_payment' && (
-        <form action="" onSubmit={handleSubmit} className={classes.FormDisplay}>
+        <form action="" className={classes.FormDisplay}>
             <label htmlFor="">Card Number: </label>
-            <input className='form-control' type="number" value={cardNumb} placeholder='0123 4567 8910' onChange={(e) => setCardNumb(e.target.value)}/>
+            <input className='form-control' type="number" value={cardNumb} placeholder='0123 4567 8910'  onChange={handleSubmitcardNUmber}/>
             <label htmlFor="">Expiry: </label>
-            <input className='form-control'  type="number"  value={expiry} placeholder='MM/YY' onChange={(e)=>setExpiry(e.target.value)}/>
+            <input className='form-control'  type="number" value={expiry} placeholder='MM/YY' onChange={handleSubmitsetExpiry}/>
             <label htmlFor="" >CVV: </label>
-            <input className="form-control" type="password" placeholder='***' value={cvvNumb}  onChange={(e)=> setCvvNumb(e.target.value)}/>
+            <input className="form-control" type="password" placeholder='***' value={cvvNumb}  onChange={handleSubmitCvv}/>
             <hr />
-            <Button className={classes.paymentBtn} type='submit' onClick={handleSubmitForm }>Pay Now</Button>
+            <Button variant='success' className={classes.paymentBtn} type='submit' onClick={handleSubmit}>Pay Now</Button>
         </form>
       )}
 
         {paymentOption === 'internet_banking' && (
-        <form action="" onSubmit={handleSubmit} className={classes.FormDisplay}>
+        <form action="" className={classes.FormDisplay}>
             <label>Select Bank</label>
             <select name="" id="" onChange={handleSelectBank} className={classes.selectBank}> 
             <option value="" disabled selected hidden>Select Bank</option>
@@ -57,9 +77,10 @@ function PaymentForm() {
             <option value="ICICI">ICICI</option>
             <option value="Axis">Axis</option>
             </select>
-            <Button className={classes.paymentBtn} type='submit' onClick={handleSubmitForm }>Pay Now</Button>
+            <Button variant='success' className={classes.paymentBtn} type='submit' onClick={handleSubmit}>Pay Now</Button>
         </form>
       )}
+      <PaymentSuccessfullModel open={show} close={()=>setShow (false)}/>
         </Container>
      );
 }

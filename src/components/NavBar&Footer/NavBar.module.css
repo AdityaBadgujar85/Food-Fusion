@@ -3,15 +3,16 @@
   font-family: "Great Vibes", cursive;
   font-weight: 600;
   font-style: normal;
+  color: #328E6E;
 }
 .Navbar-Links{
   font-family: "Story Script", sans-serif;
   font-weight: 600;
   font-style: normal;
   text-decoration: none;
-  color: grey;
+  color: #67AE6E;
   margin-left: 2rem;
 }
 .Navbar-Links:hover{
-  color: black;
+  color: #67AE6E;
 }

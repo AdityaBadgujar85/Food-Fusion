@@ -4,9 +4,19 @@
   font-style: normal;
 }
 .ImgStyle{
-  height: 70vh;
+  height: 40vh;
   object-fit: cover;  
+  border-radius: 2rem;
+  margin-top: 6rem;
 }
 .mainContainer{
   margin-top: 2rem;
+}
+
+.formContainer{
+  padding:2rem;
+  border-radius: 2rem;
+  margin-bottom: 2rem;
+  text-align: left;
+  box-shadow: 1px 1px 5px 1px grey;
 }
